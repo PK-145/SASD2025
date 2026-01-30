@@ -26,15 +26,19 @@ public class Examples
     void Exercise()
     {
         int a = 12345;
+        Point p = new Point(3, 4);
         Console.WriteLine("---------------------------------");
         Console.WriteLine("Exercise: Pacharadanai Kurakanog 66102010145");
         Console.WriteLine("---------------------------------");
+        Console.WriteLine($"Get X & Y = {p.X}, {p.Y}");
+        Console.WriteLine($"Get Long = {p.GetDistance()}");
         Console.WriteLine($"2.1 Number = |{a,10:N0}|");
         Console.WriteLine($"2.2 Number = |{a,10:D8}|");
         Console.WriteLine($"5. Person1 และ Person3 เป็น read-only property ในมุมมองผู้ใช้");
         ExtensionMethod();
         TestDelegate();
         Nullable();
+        Console.WriteLine("--------------------------------");
     }
 
     // 1. var
@@ -138,7 +142,7 @@ public class Examples
     void TestDelegate()
     {
         Console.WriteLine("--------------------------------");
-        Console.WriteLine("Delegate Variable");
+        Console.WriteLine("8. Delegate Variable");
         new DelegateSample().TestDelegate();
     }
 
@@ -146,7 +150,7 @@ public class Examples
     void ExtensionMethod()
     {
         Console.WriteLine("--------------------------------");
-        Console.WriteLine("Extension Method");
+        Console.WriteLine("7. Extension Method");
         // เรียกแบบ Utility Method ปกติ
         Console.WriteLine(StringUtil.Half("Hello World, John."));
 
@@ -162,7 +166,7 @@ public class Examples
     {
         int? a = null;
         Console.WriteLine("--------------------------------");
-        Console.WriteLine("Nullable");
+        Console.WriteLine("9. Nullable");
         Console.WriteLine(a > 0);  // false
         Console.WriteLine(a <= 0); // false; ข้อควรระวัง null เทียบกับอะไรก็ได้ false
         Console.WriteLine(a ?? 9999); // ถ้า a เป็น null จะให้ค่า 9999 ออกมา
