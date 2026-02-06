@@ -14,4 +14,6 @@ public class Product
 
     // Todo#1: create computed property "TotalPrice" as decimal
     // Todo#2: override ToString() method
+    public decimal TotalPrice => Price * Quantity;
+    public override string ToString() => $"(Name={Name},Quantity={Quantity},Price={Price},TotalPrice={TotalPrice})";
 }

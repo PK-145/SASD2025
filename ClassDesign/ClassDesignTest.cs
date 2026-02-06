@@ -12,13 +12,31 @@ public class ClassDesignTest
 
     public void Run()
     {
+        ProductTest();
         //SimpleTest();
-        JsonTest();
+        //JsonTest();
         //ImmutableTest();
+    }
+
+    void ProductTest()
+    {
+        var p = new Product()
+        {
+            Name = "Noodle",
+            Price = 40.50m,
+            Quantity = 3
+        };
+        Console.WriteLine(p);
     }
 
     void SimpleTest()
     {
+        Console.WriteLine(Math.Sin(Math.PI / 6));
+        //var sine = angle.Sin();
+
+        var text = File.ReadAllText(@"C:\Windows\win.ini");
+        //@"C:\Windows\win.ini".ReadAllText()
+        Console.WriteLine(text);
     }
 
     void JsonTest()
@@ -37,8 +55,8 @@ public class ClassDesignTest
         Customer c2 = JsonSerializer.Deserialize<Customer>(json)!;
         Console.WriteLine("c2:   " + c2);
 
-        //Customer c3 = new Customer(c2) { FirstName = "Mary" };
-        //Console.WriteLine("c3:   " + c3);
+        Customer c3 = new Customer(c2) { FirstName = "Mary" };
+        Console.WriteLine("c3:   " + c3);
     }
 
     void ImmutableTest()

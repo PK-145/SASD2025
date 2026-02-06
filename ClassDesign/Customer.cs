@@ -17,10 +17,10 @@ public class Customer
     public required DateOnly DateOfBirth { get; init; }
 
     // computed properties
-    //[JsonIgnore]
-    //public string FullName => FirstName + " " + LastName;
+    [JsonIgnore]
+    public string FullName => FirstName + " " + LastName;
 
-/*    [JsonIgnore]
+    [JsonIgnore]
     public int Age
     {
         get
@@ -36,17 +36,17 @@ public class Customer
 
             return age;
         }
-    }*/
+    }
 
-    //public Customer() { } // Empty Constructor
+    public Customer() { } // Empty Constructor
 
-/*    [SetsRequiredMembers]
+    [SetsRequiredMembers]
     public Customer(Customer obj) // Copy Constructor
     {
         FirstName = obj.FirstName;
         LastName = obj.LastName;
         DateOfBirth = obj.DateOfBirth;
-    }*/
+    }
 
-    //public override string ToString() => $"(FirstName={FirstName},DOB={DateOfBirth})";
+    public override string ToString() => $"(FirstName={FirstName},LastName={LastName},Age={Age},DOB={DateOfBirth})";
 }
