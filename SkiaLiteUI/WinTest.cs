@@ -22,9 +22,12 @@ public class WinTest
         // 1. SDL Init
         SDLx.Init(SDL.InitFlags.Video);
 
+        SDL.Rect rect;
+        SDL.GetDisplayBounds(SDL.GetPrimaryDisplay(), out rect);
+
         // 2. Create Window
-        int clientX = 1920;
-        int clientY = 1080;
+        int clientX = rect.W;
+        int clientY = rect.H;
         var window = SDLx.CreateWindow("SDL3 Create Window", clientX, clientY,
                                         SDL.WindowFlags.HighPixelDensity | 
                                         SDL.WindowFlags.OpenGL | 
