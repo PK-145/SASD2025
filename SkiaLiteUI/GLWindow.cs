@@ -17,6 +17,7 @@ public class GLWindow
     int clientX = 1920;
     int clientY = 1080;
 
+
     public GLWindow(string title, int clientX, int clientY)
     {
         this.title = title;
@@ -43,7 +44,7 @@ public class GLWindow
         SDL.GLMakeCurrent(window, context);
         SDL.GLSetSwapInterval(1); // 1 - VSync On
 
-        var skiaTest = new SkiaTest();
+        SkiaTest skiaTest = new SkiaTest();
         skiaTest.Init((int)(clientX * scale), (int)(clientY * scale));
 
         Stopwatch timer = Stopwatch.StartNew();

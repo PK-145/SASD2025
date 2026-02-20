@@ -1,10 +1,9 @@
-﻿namespace SkiaLiteUI
+﻿namespace SkiaLiteUI;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            new WinTest().Run();
-        }
+        new WinTest().Run();
     }
 }

@@ -10,7 +10,7 @@ public abstract class Widget
     public abstract void Draw(SKCanvas canvas);
 }
 
-public class RectWidget
+public class RectWidget : Widget
 {
     public Vector Position { get; }
     public Vector Size { get; }
@@ -21,15 +21,22 @@ public class RectWidget
     {
         Position = origin;
         Size = size;
+        var rand = new Random();
+        time = rand.NextSingle() * 5;
     }
 
-    //public void Act(float deltaTime)
-    //{
-    //}
+    float time = 0;
+    public override void Act(float deltaTime)
+    {
+        time += deltaTime;
+        this.Radius = MathF.Max((MathF.Sin(time) + 1) * 64.0f, 0);
+    }
 
-    //public void Draw(SKCanvas canvas)
-    //{
-    //}
+    public override void Draw(SKCanvas canvas)
+    {
+        using SKPaint paint = Util.CreatePaint(this.Color);
+        canvas.DrawRoundRect(new SKRoundRect((SKRect)this, this.Radius), paint);
+    }
 
     public static explicit operator SKRect(RectWidget r)
     {
@@ -42,8 +49,11 @@ public class RectWidget
     public static RectWidget CreateRandom(Random rand, Vector max, Vector size)
     {
         var widget = new RectWidget(rand.NextVector(max), size)
-        { Color = new SKColor((byte)rand.Next(256), (byte)rand.Next(256), (byte)rand.Next(256)) };
-        // todo: Extract & Move Method: rand.NextColor()
+                            { Color = rand.NextColor() };
+        //if(GlobalRandom.Obj.Next(2) == 1)
+        //    widget.AddAction(new RectAnimation(widget));
+
+        //widget.Children.Add(new RectWidget(widget.Position, widget.Size / 4));
         return widget;
     }
 }
