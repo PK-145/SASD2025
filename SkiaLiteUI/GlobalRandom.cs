@@ -4,10 +4,10 @@ using System.Collections.Generic;
 namespace SkiaLiteUI;
 
 // Global Object : ถือเป็น pattern ที่ดัดแปลงจาก Singleton
-/*public static class GlobalRandom
+public static class GlobalRandom
 {
     public static Random Obj { get; } = new Random();
-}*/
+}
 
 // 04 Singleton : Original from the Design Patterns book
 /*public class GlobalRandom 
