@@ -13,6 +13,7 @@ public abstract class Widget
     public List<Widget> Children { get; } = new();
 	public virtual void Draw(SKCanvas canvas)
     {
+        // ID. 145 Pacharadanai Kurakanog
         DrawSelf(canvas);
         for (int i = 0; i < Children.Count; i++)
             Children[i].Draw(canvas);

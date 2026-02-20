@@ -35,8 +35,9 @@ public class GLWindow
         // 2. Create Window
         var window = SDLx.CreateWindow(title, clientX, clientY,
                                 SDL.WindowFlags.HighPixelDensity | 
-                                SDL.WindowFlags.OpenGL | 
-                                SDL.WindowFlags.Borderless);
+                                SDL.WindowFlags.OpenGL // | 
+                                //SDL.WindowFlags.Borderless
+                                );
 
         // https://wiki.libsdl.org/SDL3/README-highdpi
         float scale = SDL.GetWindowPixelDensity(window);
