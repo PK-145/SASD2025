@@ -66,8 +66,7 @@ public class SkiaTest : IDisposable, Renderer
         var position = new Vector(100, 300);
         var text = "รู้กตัญญูกล้ำกลืนนี้นั้นโน้น abc";
 
-        var widget = new TextWidget() { Font = font, Text = text, Position = position };
-        widgets.Add(widget);
+        widgets.Add(new TextWidget(font, position, text));
 
         //BuildText(font);
         //CloneText(font);
