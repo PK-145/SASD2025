@@ -23,9 +23,9 @@ public static class Fonts
         dict[key] = font;
         return font;
     }
-    //public static SKFont GetFromFile(string file, float size)
-    //{
-    //    var typeface = Typefaces.GetFromFile(file);
-    //    return Get (typeface, size);
-    //}
+    public static SKFont GetFromFile(string file, float size)
+    {
+        var typeface = Typefaces.GetFromFile(file);
+        return Get(typeface, size);
+    }
 }

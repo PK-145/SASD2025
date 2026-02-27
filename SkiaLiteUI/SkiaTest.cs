@@ -61,8 +61,8 @@ public class SkiaTest : IDisposable, Renderer
 
     void AddText()
     {
-        var typeface = SKTypeface.FromFile(@"Resources\Trirong-Regular.ttf");
-        var font = new SKFont(typeface, 40);
+        var font = Fonts.GetFromFile(@"Resources\Trirong-Regular.ttf", 40);
+
         var position = new Vector(100, 300);
         var text = "รู้กตัญญูกล้ำกลืนนี้นั้นโน้น abc";
 
