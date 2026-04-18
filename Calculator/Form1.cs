@@ -64,5 +64,82 @@ namespace Calculator
 
             txtValue.Text = txtValue.Text.Substring(0, txtValue.Text.Length - 1);
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtValue.Text = string.Empty;
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            if (txtValue.Text.Length == 0)
+                return;
+
+            if (txtValue.Text.EndsWith("+") || txtValue.Text.EndsWith("-") || txtValue.Text.EndsWith("×") || txtValue.Text.EndsWith("÷"))
+                return;
+
+            txtValue.Text += btnPlus.Text;
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            if (txtValue.Text.Length == 0)
+                return;
+
+            if (txtValue.Text.EndsWith("+") || txtValue.Text.EndsWith("-") || txtValue.Text.EndsWith("×") || txtValue.Text.EndsWith("÷"))
+                return;
+
+            txtValue.Text += btnMinus.Text;
+        }
+
+        private void btnMulti_Click(object sender, EventArgs e)
+        {
+            if (txtValue.Text.Length == 0)
+                return;
+
+            if (txtValue.Text.EndsWith("+") || txtValue.Text.EndsWith("-") || txtValue.Text.EndsWith("×") || txtValue.Text.EndsWith("÷"))
+                return;
+
+            txtValue.Text += btnMulti.Text;
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            if (txtValue.Text.Length == 0)
+                return;
+
+            if (txtValue.Text.EndsWith("+") || txtValue.Text.EndsWith("-") || txtValue.Text.EndsWith("×") || txtValue.Text.EndsWith("÷"))
+                return;
+
+            txtValue.Text += btnDivide.Text;
+        }
+
+        private void btnEqual_Click(object sender, EventArgs e)
+        {
+            if (txtValue.Text.Length == 0)
+                return;
+            if (txtValue.Text.EndsWith("+") || txtValue.Text.EndsWith("-") || txtValue.Text.EndsWith("×") || txtValue.Text.EndsWith("÷"))
+                return;
+            try
+            {
+                string actualTxt = txtValue.Text.Replace("×", "*").Replace("÷", "/");
+
+                // Debug : Check the actual expression before evaluation
+                // MessageBox.Show("Evaluating: " + actualTxt);
+
+                if (actualTxt.Contains("/0"))
+                {
+                    MessageBox.Show("Error: Division by zero is not allowed.");
+                    return;
+                }
+
+                var result = new System.Data.DataTable().Compute(actualTxt, null);
+                txtValue.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }
