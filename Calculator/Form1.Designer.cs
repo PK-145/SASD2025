@@ -30,6 +30,15 @@
         {
             splitContainer1 = new SplitContainer();
             tableLayoutPanel1 = new TableLayoutPanel();
+            btn3 = new Button();
+            btn1 = new Button();
+            btn6 = new Button();
+            btn5 = new Button();
+            btn4 = new Button();
+            btn9 = new Button();
+            btn8 = new Button();
+            btn7 = new Button();
+            btnEqual = new Button();
             btnPlus = new Button();
             btnBlank5 = new Button();
             btn0 = new Button();
@@ -41,16 +50,9 @@
             btnDivide = new Button();
             btnBlank1 = new Button();
             btnBack = new Button();
-            btnEqual = new Button();
-            btn7 = new Button();
-            btn8 = new Button();
-            btn9 = new Button();
-            btn4 = new Button();
-            btn5 = new Button();
-            btn6 = new Button();
-            btn1 = new Button();
-            btn3 = new Button();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -62,6 +64,10 @@
             splitContainer1.Location = new Point(0, 0);
             splitContainer1.Name = "splitContainer1";
             splitContainer1.Orientation = Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(textBox1);
             // 
             // splitContainer1.Panel2
             // 
@@ -108,6 +114,96 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Size = new Size(298, 350);
             tableLayoutPanel1.TabIndex = 0;
+            // 
+            // btn3
+            // 
+            btn3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn3.Location = new Point(151, 213);
+            btn3.Name = "btn3";
+            btn3.Size = new Size(68, 64);
+            btn3.TabIndex = 28;
+            btn3.Text = "3";
+            btn3.UseVisualStyleBackColor = true;
+            // 
+            // btn1
+            // 
+            btn1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn1.Location = new Point(3, 213);
+            btn1.Name = "btn1";
+            btn1.Size = new Size(68, 64);
+            btn1.TabIndex = 27;
+            btn1.Text = "1";
+            btn1.UseVisualStyleBackColor = true;
+            // 
+            // btn6
+            // 
+            btn6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn6.Location = new Point(151, 143);
+            btn6.Name = "btn6";
+            btn6.Size = new Size(68, 64);
+            btn6.TabIndex = 26;
+            btn6.Text = "6";
+            btn6.UseVisualStyleBackColor = true;
+            // 
+            // btn5
+            // 
+            btn5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn5.Location = new Point(77, 143);
+            btn5.Name = "btn5";
+            btn5.Size = new Size(68, 64);
+            btn5.TabIndex = 25;
+            btn5.Text = "5";
+            btn5.UseVisualStyleBackColor = true;
+            // 
+            // btn4
+            // 
+            btn4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn4.Location = new Point(3, 143);
+            btn4.Name = "btn4";
+            btn4.Size = new Size(68, 64);
+            btn4.TabIndex = 24;
+            btn4.Text = "4";
+            btn4.UseVisualStyleBackColor = true;
+            // 
+            // btn9
+            // 
+            btn9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn9.Location = new Point(151, 73);
+            btn9.Name = "btn9";
+            btn9.Size = new Size(68, 64);
+            btn9.TabIndex = 23;
+            btn9.Text = "9";
+            btn9.UseVisualStyleBackColor = true;
+            // 
+            // btn8
+            // 
+            btn8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn8.Location = new Point(77, 73);
+            btn8.Name = "btn8";
+            btn8.Size = new Size(68, 64);
+            btn8.TabIndex = 22;
+            btn8.Text = "8";
+            btn8.UseVisualStyleBackColor = true;
+            // 
+            // btn7
+            // 
+            btn7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn7.Location = new Point(3, 73);
+            btn7.Name = "btn7";
+            btn7.Size = new Size(68, 64);
+            btn7.TabIndex = 21;
+            btn7.Text = "7";
+            btn7.UseVisualStyleBackColor = true;
+            // 
+            // btnEqual
+            // 
+            btnEqual.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEqual.Location = new Point(225, 283);
+            btnEqual.Name = "btnEqual";
+            btnEqual.Size = new Size(70, 64);
+            btnEqual.TabIndex = 20;
+            btnEqual.Text = "=";
+            btnEqual.UseVisualStyleBackColor = true;
             // 
             // btnPlus
             // 
@@ -213,95 +309,18 @@
             btnBack.Text = "⌫";
             btnBack.UseVisualStyleBackColor = true;
             // 
-            // btnEqual
+            // textBox1
             // 
-            btnEqual.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEqual.Location = new Point(225, 283);
-            btnEqual.Name = "btnEqual";
-            btnEqual.Size = new Size(70, 64);
-            btnEqual.TabIndex = 20;
-            btnEqual.Text = "=";
-            btnEqual.UseVisualStyleBackColor = true;
-            // 
-            // btn7
-            // 
-            btn7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn7.Location = new Point(3, 73);
-            btn7.Name = "btn7";
-            btn7.Size = new Size(68, 64);
-            btn7.TabIndex = 21;
-            btn7.Text = "7";
-            btn7.UseVisualStyleBackColor = true;
-            // 
-            // btn8
-            // 
-            btn8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn8.Location = new Point(77, 73);
-            btn8.Name = "btn8";
-            btn8.Size = new Size(68, 64);
-            btn8.TabIndex = 22;
-            btn8.Text = "8";
-            btn8.UseVisualStyleBackColor = true;
-            // 
-            // btn9
-            // 
-            btn9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn9.Location = new Point(151, 73);
-            btn9.Name = "btn9";
-            btn9.Size = new Size(68, 64);
-            btn9.TabIndex = 23;
-            btn9.Text = "9";
-            btn9.UseVisualStyleBackColor = true;
-            // 
-            // btn4
-            // 
-            btn4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn4.Location = new Point(3, 143);
-            btn4.Name = "btn4";
-            btn4.Size = new Size(68, 64);
-            btn4.TabIndex = 24;
-            btn4.Text = "4";
-            btn4.UseVisualStyleBackColor = true;
-            // 
-            // btn5
-            // 
-            btn5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn5.Location = new Point(77, 143);
-            btn5.Name = "btn5";
-            btn5.Size = new Size(68, 64);
-            btn5.TabIndex = 25;
-            btn5.Text = "5";
-            btn5.UseVisualStyleBackColor = true;
-            // 
-            // btn6
-            // 
-            btn6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn6.Location = new Point(151, 143);
-            btn6.Name = "btn6";
-            btn6.Size = new Size(68, 64);
-            btn6.TabIndex = 26;
-            btn6.Text = "6";
-            btn6.UseVisualStyleBackColor = true;
-            // 
-            // btn1
-            // 
-            btn1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn1.Location = new Point(3, 213);
-            btn1.Name = "btn1";
-            btn1.Size = new Size(68, 64);
-            btn1.TabIndex = 27;
-            btn1.Text = "1";
-            btn1.UseVisualStyleBackColor = true;
-            // 
-            // btn3
-            // 
-            btn3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn3.Location = new Point(151, 213);
-            btn3.Name = "btn3";
-            btn3.Size = new Size(68, 64);
-            btn3.TabIndex = 28;
-            btn3.Text = "3";
-            btn3.UseVisualStyleBackColor = true;
+            textBox1.BackColor = SystemColors.Control;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(6, 3);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "145";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(292, 86);
+            textBox1.TabIndex = 0;
+            textBox1.TextAlign = HorizontalAlignment.Right;
             // 
             // Form1
             // 
@@ -311,6 +330,8 @@
             Controls.Add(splitContainer1);
             Name = "Form1";
             Text = "Form1";
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
@@ -342,5 +363,6 @@
         private Button btn9;
         private Button btn8;
         private Button btn7;
+        private TextBox textBox1;
     }
 }
