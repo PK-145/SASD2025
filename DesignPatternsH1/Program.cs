@@ -12,8 +12,8 @@ internal class Program
         //new DelegateSample().TestDelegate2();
         //new LightweightClass().Test();
 
-        TestObserver();
-        //TestCommand();
+        //TestObserver();
+        TestCommand();
         //TestProxy();
         //TestDecorator();
         //TestChainOfResponsibility();
@@ -42,7 +42,11 @@ internal class Program
         menuItem.Click();
 
         // Small
-        var menuItem2 = new MyMenuItemB(() => Console.WriteLine("Command 2 Save"));
+        //var menuItem2 = new MyMenuItemB(() => Console.WriteLine("Command 2 Save"));
+        //menuItem2.Click();
+
+        // Small (use delegate)
+        var menuItem2 = new MyMenuItemB(() => Console.WriteLine("Small Command"));
         menuItem2.Click();
     }
 
