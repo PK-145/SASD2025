@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
-            textBox1 = new TextBox();
+            txtValue = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             btn3 = new Button();
             btn1 = new Button();
@@ -67,7 +67,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            splitContainer1.Panel1.Controls.Add(textBox1);
+            splitContainer1.Panel1.Controls.Add(txtValue);
             // 
             // splitContainer1.Panel2
             // 
@@ -76,18 +76,18 @@
             splitContainer1.SplitterDistance = 101;
             splitContainer1.TabIndex = 0;
             // 
-            // textBox1
+            // txtValue
             // 
-            textBox1.BackColor = SystemColors.Control;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(6, 3);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "145";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(292, 86);
-            textBox1.TabIndex = 0;
-            textBox1.TextAlign = HorizontalAlignment.Right;
+            txtValue.BackColor = SystemColors.Control;
+            txtValue.BorderStyle = BorderStyle.None;
+            txtValue.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtValue.Location = new Point(6, 3);
+            txtValue.Name = "txtValue";
+            txtValue.PlaceholderText = "145";
+            txtValue.ReadOnly = true;
+            txtValue.Size = new Size(292, 86);
+            txtValue.TabIndex = 0;
+            txtValue.TextAlign = HorizontalAlignment.Right;
             // 
             // tableLayoutPanel1
             // 
@@ -331,6 +331,7 @@
             btnBack.TabIndex = 0;
             btnBack.Text = "⌫";
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // Form1
             // 
@@ -373,6 +374,6 @@
         private Button btn9;
         private Button btn8;
         private Button btn7;
-        private TextBox textBox1;
+        private TextBox txtValue;
     }
 }
