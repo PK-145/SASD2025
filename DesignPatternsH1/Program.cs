@@ -8,11 +8,11 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        new DelegateSample().TestDelegate();
+        //new DelegateSample().TestDelegate();
         //new DelegateSample().TestDelegate2();
         //new LightweightClass().Test();
 
-        //TestObserver();
+        TestObserver();
         //TestCommand();
         //TestProxy();
         //TestDecorator();
@@ -28,7 +28,10 @@ internal class Program
 
         // Small
         var subject2 = new Subject();
-        subject2.MyEvent += (n) => { Console.WriteLine("Receive event value n = " + n); };
+        subject2.MyEvent += n => Console.WriteLine("Event occur : n = " + n);
+        subject2.MyEvent += n => Console.WriteLine("Func2 : " + n*n);
+        subject2.MyEvent += n => Console.WriteLine("Func3 : " + n*2);
+
         subject2.DoSomething();
     }
 
