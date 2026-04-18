@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37027.9 d17.14
+VisualStudioVersion = 17.14.37027.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant", "Restaurant\Restaurant.csproj", "{74F62453-882B-4D1E-8C24-04889B6AD688}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsH1", "DesignPatternsH1\DesignPatternsH1.csproj", "{CA7621E5-A5A1-738C-6ABD-395556660D3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm1", "WinForm1\WinForm1.csproj", "{B2497644-4D3B-49ED-BF26-4CE1A40F7E53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{774D7098-D11C-4A6C-B1A4-52A879E55ED7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{B2497644-4D3B-49ED-BF26-4CE1A40F7E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2497644-4D3B-49ED-BF26-4CE1A40F7E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2497644-4D3B-49ED-BF26-4CE1A40F7E53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{774D7098-D11C-4A6C-B1A4-52A879E55ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{774D7098-D11C-4A6C-B1A4-52A879E55ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{774D7098-D11C-4A6C-B1A4-52A879E55ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{774D7098-D11C-4A6C-B1A4-52A879E55ED7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
