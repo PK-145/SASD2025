@@ -41,15 +41,15 @@
             btn7 = new Button();
             btnEqual = new Button();
             btnPlus = new Button();
-            btnBlank5 = new Button();
+            btnDecimal = new Button();
             btn0 = new Button();
-            btnBlank2 = new Button();
+            btnSign = new Button();
             btn2 = new Button();
             btnMinus = new Button();
             btnMulti = new Button();
             btnClear = new Button();
             btnDivide = new Button();
-            btnBlank1 = new Button();
+            btnMod = new Button();
             btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -107,15 +107,15 @@
             tableLayoutPanel1.Controls.Add(btn7, 0, 1);
             tableLayoutPanel1.Controls.Add(btnEqual, 3, 4);
             tableLayoutPanel1.Controls.Add(btnPlus, 3, 3);
-            tableLayoutPanel1.Controls.Add(btnBlank5, 2, 4);
+            tableLayoutPanel1.Controls.Add(btnDecimal, 2, 4);
             tableLayoutPanel1.Controls.Add(btn0, 1, 4);
-            tableLayoutPanel1.Controls.Add(btnBlank2, 0, 4);
+            tableLayoutPanel1.Controls.Add(btnSign, 0, 4);
             tableLayoutPanel1.Controls.Add(btn2, 1, 3);
             tableLayoutPanel1.Controls.Add(btnMinus, 3, 2);
             tableLayoutPanel1.Controls.Add(btnMulti, 3, 1);
             tableLayoutPanel1.Controls.Add(btnClear, 2, 0);
             tableLayoutPanel1.Controls.Add(btnDivide, 1, 0);
-            tableLayoutPanel1.Controls.Add(btnBlank1, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnMod, 0, 0);
             tableLayoutPanel1.Controls.Add(btnBack, 3, 0);
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -238,13 +238,16 @@
             btnPlus.UseVisualStyleBackColor = true;
             btnPlus.Click += btnPlus_Click;
             // 
-            // btnBlank5
+            // btnDecimal
             // 
-            btnBlank5.Location = new Point(151, 283);
-            btnBlank5.Name = "btnBlank5";
-            btnBlank5.Size = new Size(68, 64);
-            btnBlank5.TabIndex = 18;
-            btnBlank5.UseVisualStyleBackColor = true;
+            btnDecimal.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDecimal.Location = new Point(151, 283);
+            btnDecimal.Name = "btnDecimal";
+            btnDecimal.Size = new Size(68, 64);
+            btnDecimal.TabIndex = 18;
+            btnDecimal.Text = ".";
+            btnDecimal.UseVisualStyleBackColor = true;
+            btnDecimal.Click += btnDecimal_Click;
             // 
             // btn0
             // 
@@ -257,13 +260,16 @@
             btn0.UseVisualStyleBackColor = true;
             btn0.Click += btn0_Click;
             // 
-            // btnBlank2
+            // btnSign
             // 
-            btnBlank2.Location = new Point(3, 283);
-            btnBlank2.Name = "btnBlank2";
-            btnBlank2.Size = new Size(68, 64);
-            btnBlank2.TabIndex = 16;
-            btnBlank2.UseVisualStyleBackColor = true;
+            btnSign.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSign.Location = new Point(3, 283);
+            btnSign.Name = "btnSign";
+            btnSign.Size = new Size(68, 64);
+            btnSign.TabIndex = 16;
+            btnSign.Text = "+/-";
+            btnSign.UseVisualStyleBackColor = true;
+            btnSign.Click += btnSign_Click;
             // 
             // btn2
             // 
@@ -320,13 +326,16 @@
             btnDivide.UseVisualStyleBackColor = true;
             btnDivide.Click += btnDivide_Click;
             // 
-            // btnBlank1
+            // btnMod
             // 
-            btnBlank1.Location = new Point(3, 3);
-            btnBlank1.Name = "btnBlank1";
-            btnBlank1.Size = new Size(68, 64);
-            btnBlank1.TabIndex = 1;
-            btnBlank1.UseVisualStyleBackColor = true;
+            btnMod.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMod.Location = new Point(3, 3);
+            btnMod.Name = "btnMod";
+            btnMod.Size = new Size(68, 64);
+            btnMod.TabIndex = 1;
+            btnMod.Text = "%";
+            btnMod.UseVisualStyleBackColor = true;
+            btnMod.Click += btnMod_Click;
             // 
             // btnBack
             // 
@@ -361,15 +370,15 @@
         private SplitContainer splitContainer1;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnBack;
-        private Button btnBlank5;
+        private Button btnDecimal;
         private Button btn0;
-        private Button btnBlank2;
+        private Button btnSign;
         private Button btn2;
         private Button btnMinus;
         private Button btnMulti;
         private Button btnClear;
         private Button btnDivide;
-        private Button btnBlank1;
+        private Button btnMod;
         private Button btnPlus;
         private Button btnEqual;
         private Button btn3;

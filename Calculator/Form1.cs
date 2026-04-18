@@ -141,5 +141,64 @@ namespace Calculator
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void btnDecimal_Click(object sender, EventArgs e)
+        {
+            if (txtValue.Text.Length == 0)
+            {
+                txtValue.Text += "0.";
+                return;
+            }
+
+            // Check if the last character is an operator
+            if (txtValue.Text.EndsWith("+") || txtValue.Text.EndsWith("-") || txtValue.Text.EndsWith("×") || txtValue.Text.EndsWith("÷"))
+            {
+                txtValue.Text += "0.";
+                return;
+            }
+
+            // Check if the current number already contains a decimal point
+            string[] parts = txtValue.Text.Split(new char[] { '+', '-', '×', '÷' });
+            string currentNumber = parts[parts.Length - 1];
+
+            if (currentNumber.Contains("."))
+                return;
+
+            txtValue.Text += btnDecimal.Text;
+        }
+
+        private void btnSign_Click(object sender, EventArgs e)
+        {
+            if (txtValue.Text.Length == 0)
+                return;
+
+            // Check if the last character is an operator
+            if (txtValue.Text.EndsWith("+") || txtValue.Text.EndsWith("-") || txtValue.Text.EndsWith("×") || txtValue.Text.EndsWith("÷"))
+                return;
+
+            // Check if the current number already has a sign
+            string[] parts = txtValue.Text.Split(new char[] { '+', '-', '×', '÷' });
+            string currentNumber = parts[parts.Length - 1];
+
+            if (currentNumber.StartsWith("-"))
+            {
+                txtValue.Text = txtValue.Text.Substring(0, txtValue.Text.Length - currentNumber.Length) + currentNumber.Substring(1);
+            }
+            else
+            {
+                txtValue.Text = txtValue.Text.Substring(0, txtValue.Text.Length - currentNumber.Length) + "-" + currentNumber;
+            }
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            if (txtValue.Text.Length == 0)
+                return;
+
+            if (txtValue.Text.EndsWith("+") || txtValue.Text.EndsWith("-") || txtValue.Text.EndsWith("×") || txtValue.Text.EndsWith("÷"))
+                return;
+
+            txtValue.Text += "%";
+        }
     }
 }
