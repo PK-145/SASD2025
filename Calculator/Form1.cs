@@ -200,5 +200,10 @@ namespace Calculator
 
             txtValue.Text += "%";
         }
+
+        private void txtValue_TextChanged(object sender, EventArgs e)
+        {
+            txtValue.SelectionStart = txtValue.Text.Length;
+        }
     }
 }

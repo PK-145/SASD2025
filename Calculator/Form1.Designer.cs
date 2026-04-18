@@ -88,6 +88,7 @@
             txtValue.Size = new Size(292, 86);
             txtValue.TabIndex = 0;
             txtValue.TextAlign = HorizontalAlignment.Right;
+            txtValue.TextChanged += txtValue_TextChanged;
             // 
             // tableLayoutPanel1
             // 
@@ -355,7 +356,7 @@
             ClientSize = new Size(304, 461);
             Controls.Add(splitContainer1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Basic Calculator 145";
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
