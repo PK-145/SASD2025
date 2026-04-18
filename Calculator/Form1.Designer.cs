@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            textBox1 = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             btn3 = new Button();
             btn1 = new Button();
@@ -50,7 +51,6 @@
             btnDivide = new Button();
             btnBlank1 = new Button();
             btnBack = new Button();
-            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -75,6 +75,19 @@
             splitContainer1.Size = new Size(304, 461);
             splitContainer1.SplitterDistance = 101;
             splitContainer1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = SystemColors.Control;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(6, 3);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "145";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(292, 86);
+            textBox1.TabIndex = 0;
+            textBox1.TextAlign = HorizontalAlignment.Right;
             // 
             // tableLayoutPanel1
             // 
@@ -124,6 +137,7 @@
             btn3.TabIndex = 28;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
+            btn3.Click += btn3_Click;
             // 
             // btn1
             // 
@@ -134,6 +148,7 @@
             btn1.TabIndex = 27;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
+            btn1.Click += btn1_Click;
             // 
             // btn6
             // 
@@ -144,6 +159,7 @@
             btn6.TabIndex = 26;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
+            btn6.Click += btn6_Click;
             // 
             // btn5
             // 
@@ -154,6 +170,7 @@
             btn5.TabIndex = 25;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
+            btn5.Click += btn5_Click;
             // 
             // btn4
             // 
@@ -164,6 +181,7 @@
             btn4.TabIndex = 24;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
+            btn4.Click += btn4_Click;
             // 
             // btn9
             // 
@@ -174,6 +192,7 @@
             btn9.TabIndex = 23;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
+            btn9.Click += btn9_Click;
             // 
             // btn8
             // 
@@ -184,6 +203,7 @@
             btn8.TabIndex = 22;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
+            btn8.Click += btn8_Click;
             // 
             // btn7
             // 
@@ -194,13 +214,14 @@
             btn7.TabIndex = 21;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
+            btn7.Click += btn7_Click;
             // 
             // btnEqual
             // 
             btnEqual.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEqual.Location = new Point(225, 283);
             btnEqual.Name = "btnEqual";
-            btnEqual.Size = new Size(70, 64);
+            btnEqual.Size = new Size(68, 64);
             btnEqual.TabIndex = 20;
             btnEqual.Text = "=";
             btnEqual.UseVisualStyleBackColor = true;
@@ -210,7 +231,7 @@
             btnPlus.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPlus.Location = new Point(225, 213);
             btnPlus.Name = "btnPlus";
-            btnPlus.Size = new Size(70, 64);
+            btnPlus.Size = new Size(68, 64);
             btnPlus.TabIndex = 19;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
@@ -232,6 +253,7 @@
             btn0.TabIndex = 17;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
+            btn0.Click += btn0_Click;
             // 
             // btnBlank2
             // 
@@ -250,13 +272,14 @@
             btn2.TabIndex = 13;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
+            btn2.Click += btn2_Click;
             // 
             // btnMinus
             // 
             btnMinus.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMinus.Location = new Point(225, 143);
             btnMinus.Name = "btnMinus";
-            btnMinus.Size = new Size(70, 64);
+            btnMinus.Size = new Size(68, 64);
             btnMinus.TabIndex = 11;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
@@ -266,7 +289,7 @@
             btnMulti.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMulti.Location = new Point(225, 73);
             btnMulti.Name = "btnMulti";
-            btnMulti.Size = new Size(70, 64);
+            btnMulti.Size = new Size(68, 64);
             btnMulti.TabIndex = 7;
             btnMulti.Text = "×";
             btnMulti.UseVisualStyleBackColor = true;
@@ -304,23 +327,10 @@
             btnBack.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.Location = new Point(225, 3);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(70, 64);
+            btnBack.Size = new Size(68, 64);
             btnBack.TabIndex = 0;
             btnBack.Text = "⌫";
             btnBack.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = SystemColors.Control;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(6, 3);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "145";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(292, 86);
-            textBox1.TabIndex = 0;
-            textBox1.TextAlign = HorizontalAlignment.Right;
             // 
             // Form1
             // 
